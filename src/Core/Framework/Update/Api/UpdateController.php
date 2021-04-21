@@ -114,6 +114,8 @@ class UpdateController extends AbstractController
         }
 
         try {
+            return new JsonResponse();
+
             $updates = $this->apiClient->checkForUpdates();
 
             if (!$updates->isNewer) {
